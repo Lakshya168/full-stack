@@ -1,0 +1,128 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job portal</title>
+</head>
+<body>
+    <header>
+        <h1>Job portal</h1>
+        
+        <p>This is place you find your prefered jobs</p>
+    </header>
+    <hr>
+    <nav>
+        <a href="Jobs">Jobs</a>  |
+        <a href="Apply">Apply </a> | 
+        <a href="Contact">Contact</a>  
+        
+    </nav>
+    <hr>
+
+   
+    <section id = "Jobs">
+        <h2>Available Jobs</h2>
+
+        <hr><hr>
+
+        <article>
+           <h3> Editor</h3>
+           <p><b>Job Description :</b> This job  is for video and photo editors <br> if any of you interested the contact us !</p>
+           <p><b>Work :</b> work from home </p>
+        </article>
+
+        <hr>
+
+        <article>
+            <h3> Web Developer</h3>
+            <p><b>Company:</b> ABC Tech</p>
+            <p><b>Location:</b> Remote</p>
+            <p><b>Skills:</b> HTML, CSS, JavaScript</p>
+        </article>
+
+        <hr>
+
+        <article>
+            <h3> Java Developer</h3>
+            <p><b>Company:</b> Tech Solutions</p>
+            <p><b>Location:</b> Bangalore</p>
+            <p><b>Skills:</b> Java, SQL, OOPs</p>
+        </article>
+
+        <hr>
+
+         <article>
+            <h3>Data Analyst</h3>
+            <p><b>Company:</b> DataCorp</p>
+            <p><b>Location:</b> Delhi</p>
+            <p><b>Skills:</b> Excel, SQL</p>
+        </article>
+    </section>
+
+
+    <hr>
+
+
+    <section id = "Apply">
+        <h2>Application for job </h2>
+        <br>
+        <form>
+            <label for="name"> Enter Your Name</label>
+            <input type="text" name="name" id="name" required> 
+
+            <br> <br>
+
+            <label for="email"> Type Your Email </label>
+            <input type="email" name="email" id="email" required>
+
+            <br><br>
+
+            <label for="Job Selection">Select Your Job</label> 
+            <select>
+                <option>--Select Option--</option>
+                <option value="1">Editor</option>
+                <option value="2">Web Developer</option>
+                <option value="3">Java Developer</option>
+                <option value="4">Data Analyst</option>
+            </select>
+
+            <button>Submit</button>
+
+            <br><br>
+
+           <label for="info">Tell Us More About You (optional)</label>
+           <br><br>
+
+           <textarea id="info" rows="10" cols="30"></textarea>
+
+           <br><br>
+
+           <button>Submit</button>
+        </form>
+    </section>
+
+
+    <hr>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Enter Your Number</p>
+        <input type="text" name="mobilenumber" id="mobilenumber" required> 
+        <button>Submit</button>
+        
+        <br><br>
+
+        <p>Enter Email :</p>
+        <input type="text" name="email" id="email" required>
+        <button>Submit</button>
+    </section>
+
+    <br><br>
+    <hr><hr>
+
+    <footer>
+        <br>
+         &copy : All right reversed 
+    </footer>
+</body>
+</html>

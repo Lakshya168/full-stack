@@ -3,99 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Portal</title>
+    <title>Document</title>
 </head>
-
 <body>
-
     <header>
-        <h1>Job Portal</h1>
-        <p>This is a place where job finds you </p>
+        <h1>Lakshya</h1> <!-- h1 is header -->
+        <p>Welcome to my website I am a java full stack developer</p> <!--p for paragraph-->
+        <img src="OIP.jpg" alt="My jmage" height="100" width="100">
     </header>
-
     <hr>
-
     <nav>
-        <a href="#jobs">Jobs</a> |
-        <a href="#apply">Apply</a> |
-        <a href="#contact">Contact</a>
+        <a href="#github"> GITHUB</a> | 
+        <a href="#leetcode">LEETCODE</a> | 
+        <a href="#linkdin">LINKEDIN</a>
     </nav>
+    <section>
+        <article>
+        <h2>Project</h2>
+        <h3>URLs Shortner | <a href="#github">GITHUB</a></h3>
+        <p>it will compree long URLs into shorl URLs</p>
+        </article>
+        <article>
+        <h3>weather application | <a href="#github">GITHUB</a></h3>
+        <p>it provide the weather details </p>
+        </article>
 
+        
+    </section>
     <hr>
 
-    <section id="jobs">
-        <h2>Available Jobs</h2>
-
-        <article>
-            <h3>Web Developer</h3>
-            <p><b>Company:</b> ABC Tech</p>
-            <p><b>Location:</b> Remote</p>
-            <p><b>Skills:</b> HTML, CSS, JavaScript</p>
-        </article>
-
+    <section></section>
+    <h2>skills</h2>
+    <ol type = "I" > 
+        <li>java</li>
+        <li>c++</li>
+        <li>react</li>
+        <li>css</li>
+    </ol>
+    <section>
         <hr>
-
-        <article>
-            <h3>Java Developer</h3>
-            <p><b>Company:</b> XYZ Solutions</p>
-            <p><b>Location:</b> Bangalore</p>
-            <p><b>Skills:</b> Java, SQL, OOPs</p>
-        </article>
-
-        <hr>
-
-        <article>
-            <h3>Data Analyst</h3>
-            <p><b>Company:</b> DataCorp</p>
-            <p><b>Location:</b> Delhi</p>
-            <p><b>Skills:</b> Excel, SQL</p>
-        </article>
+        <h2>education</h2>
+        <table border="2">
+           <thead>
+             <tr>
+                <th>course</th>
+                <th>spelisation</th>
+                <th>institute</th>
+                <th>year</th>
+                <th>grades</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+                <td>btech</td>
+                <td>cse</td>
+                <td>cu</td>
+                <td>2028</td>
+                <td>8</td>
+            </tr>
+           </tbody>
+        </table>
     </section>
 
-    <hr>
+    <section>
+        <h2>contact me </h2>
+        <form >
+            <label for="name"> enter your name</label>
+            <input type="text" name="" id="name" name = "name" required> <br>
+            <br>
+ 
+            <label for="email"> Enter your email</label>
+            <input type="email" id="email" name = "email" required> <br>
 
-    <section id="apply">
-        <h2>Apply for Job</h2>
 
-        <form>
-            <label for="name">Enter your name</label><br>
-            <input type="text" id="name" required>
-            <br><br>
-
-            <label for="email">Enter your email</label><br>
-            <input type="email" id="email" required>
-            <br><br>
-
-            <label for="job">Select Job</label><br>
-            <select id="job">
-                <option>--Select Job--</option>
-                <option>Web Developer</option>
-                <option>Java Developer</option>
-                <option>Data Analyst</option>
+            <label for="reason"> Reason Of Contact </label>
+            <select id="reason">
+                <option value="select reason">--Reason--</option>
+                <option value="Job opportunity">job oppurtunity</option>
+                <option value="freelance">freelance</option>
+                <option value="training">training requirement</option>
             </select>
-            <br><br>
-
-            <label for="msg">Why should we hire you?</label><br>
-            <textarea id="msg" rows="5" cols="30"></textarea>
-            <br><br>
-
-            <button type="submit">Apply</button>
+            <br>
+            <label for="feedback"> Please tell us </label>
+            <textarea id="feedback" rows = 10 cols="30"></textarea> <br>
+            <button>Submit</button>
         </form>
+        <hr>
+        <footer>
+            &copy : All right reversed 
+        </footer>
     </section>
-
-    <hr>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: jobportal@example.com</p>
-        <p>Phone: 9876543210</p>
-    </section>
-
-    <hr>
-
-    <footer>
-        &copy; All rights reserved
-    </footer>
-
 </body>
 </html>

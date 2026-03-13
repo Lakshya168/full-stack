@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head> <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Manager Web Application</title>
+</head>
+<body>
+
+<h2>Student Task Manager</h2>
+
+<input type="text" id="taskName" placeholder="Enter Task Name">
+
+<label for="priority">Set Priority</label>
+    <select id="priority">
+        <option value="low">Low</option>
+        <option value="medium">medium</option>
+        <option value="hard">Hard</option>
+    </select>
+
+<button onclick="addTask()">Add Task</button>
+
+<br><br>
+
+<button onclick="showAll()">Show All</button>
+<button onclick="showCompleted()">Completed</button>
+
+<ul id="taskList"></ul>
+
+<script>
+let tasks = [];
+
+function addTask() {
+    let name = document.getElementById("taskName").value;
+    let priority = document.getElementById("priority").value;
+
+    if(name === "") return;
+
+    let task = {
+        name: name,
+        priority: priority,
+        completed: false
+    };
+
+    tasks.push(task);
+    document.getElementById("taskName").value = "";
+    displayTasks(tasks);
+}
+
+function displayTasks(taskArray) {
+    let list = document.getElementById("taskList");
+    list.innerHTML = "";
+
+    taskArray.forEach((task) => {
+
+        let realIndex = tasks.indexOf(task);
+
+        let li = document.createElement("li");
+
+        li.innerHTML = task.name + " (" + task.priority + ") ";
+
+        if(task.completed){
+            li.style.textDecoration = "line-through";
+        }
+
+        let completeBtn = document.createElement("button");
+        completeBtn.innerText = "Complete";
+        completeBtn.onclick = function(){
+            tasks[realIndex].completed = true;
+            displayTasks(tasks);
+        };
+
+        let deleteBtn = document.createElement("button");
+        deleteBtn.innerText = "Delete";
+        deleteBtn.onclick = function(){
+            tasks.splice(realIndex,1);
+            displayTasks(tasks);
+        };
+
+        li.appendChild(completeBtn);
+        li.appendChild(deleteBtn);
+
+        list.appendChild(li);
+    });
+}
+
+function showAll(){
+    displayTasks(tasks);
+}
+
+function showCompleted(){
+    let completedTasks = tasks.filter(task => task.completed);
+    displayTasks(completedTasks);
+}
+</script>
+
+</body>
+</html>
